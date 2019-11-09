@@ -1,4 +1,19 @@
 import React from 'react';
+import profile1 from '../img/profile1.png';
+import profile2 from '../img/profile2.jpeg';
+import profile3 from '../img/profile3.jpeg';
+// import profile4 from '../img/profile4.jpeg';
+// import profile5 from '../img/profile5.JPG';
+// import profile6 from '../img/profile6.jpg';
+import profile7 from '../img/profile7.jpeg';
+import profile8 from '../img/profile8.JPG';
+import profile9 from '../img/profile9.JPG';
+import profile10 from '../img/profile10.jpg';
+// import profile11 from '../img/profile11.jpg';
+import profile12 from '../img/profile12.jpg';
+import profile13 from '../img/profile13.jpg';
+import profile14 from '../img/profile14.jpg';
+import profile15 from '../img/profile15.jpeg';
 
 class Table extends React.Component {
     render() {
@@ -9,7 +24,7 @@ class Table extends React.Component {
                     "titleTop":"Tensorflow 2.0",
                     "titleMiddle":"무엇이 바뀌었을까요?",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile1,
                     "speakerName":"박해선"
                 },
                 {
@@ -17,7 +32,7 @@ class Table extends React.Component {
                     "titleTop":"빠르고 지속적으로",
                     "titleMiddle":"성장하는 방법",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile2,
                     "speakerName":"Las"
                 },
                 {
@@ -25,7 +40,7 @@ class Table extends React.Component {
                     "titleTop":"What is equivalent of",
                     "titleMiddle":"android ~in flutter?",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile3,
                     "speakerName":"최희재"
                 },
                 {
@@ -33,7 +48,7 @@ class Table extends React.Component {
                     "titleTop":"Codelab",
                     "titleMiddle":"",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile1,
                     "speakerName":"박해선"
                 }
             ],
@@ -67,7 +82,7 @@ class Table extends React.Component {
                     "titleTop":"Codelab",
                     "titleMiddle":"",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile1,
                     "speakerName":"Las"
                 }
             ],
@@ -77,7 +92,7 @@ class Table extends React.Component {
                     "titleTop":"웹초보도 할 수 있는",
                     "titleMiddle":"WebVR/AR with aframe",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile7,
                     "speakerName":"유경수"
                 },
                 {
@@ -85,7 +100,7 @@ class Table extends React.Component {
                     "titleTop":"용산조립서버에서",
                     "titleMiddle":"클라우드까지",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile8,
                     "speakerName":"정민석"
                 },
                 {
@@ -93,7 +108,7 @@ class Table extends React.Component {
                     "titleTop":"GAN을 활용한, 내 손글씨를 따라쓰는 인공지능",
                     "titleMiddle":"-나 혼자서",
                     "titleBottom":"딥러닝 프로젝트 A to Z",
-                    "speakerImg":"",
+                    "speakerImg":profile9,
                     "speakerName":"정민정"
                 },
                 {
@@ -101,7 +116,7 @@ class Table extends React.Component {
                     "titleTop":"Codelab",
                     "titleMiddle":"",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile1,
                     "speakerName":"박재성"
                 }
             ],
@@ -111,7 +126,7 @@ class Table extends React.Component {
                     "titleTop":"의식적인 연습으로 TDD,",
                     "titleMiddle":"리팩토링, 클린코드",
                     "titleBottom":"연습하기",
-                    "speakerImg":"",
+                    "speakerImg":profile10,
                     "speakerName":"박재성"
                 },
                 {
@@ -127,7 +142,7 @@ class Table extends React.Component {
                     "titleTop":"만들면서, 자랑하면서",
                     "titleMiddle":"성장하는 개발자",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile12,
                     "speakerName":"이민석"
                 },
                 {
@@ -135,7 +150,7 @@ class Table extends React.Component {
                     "titleTop":"Codelab",
                     "titleMiddle":"",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile1,
                     "speakerName":"Las"
                 }
             ],
@@ -145,7 +160,7 @@ class Table extends React.Component {
                     "titleTop":"구글 클라우드 플랫폼으로",
                     "titleMiddle":"오픈 소스 AI 솔루션 경험하기",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile13,
                     "speakerName":"김민현"
                 },
                 {
@@ -153,7 +168,7 @@ class Table extends React.Component {
                     "titleTop":"증강현실 개발의 핵심,",
                     "titleMiddle":"ARCore!",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile14,
                     "speakerName":"박유진"
                 },
                 {
@@ -161,7 +176,7 @@ class Table extends React.Component {
                     "titleTop":"Web for Everyone",
                     "titleMiddle":"",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile15,
                     "speakerName":"장한보람"
                 },
                 {
@@ -169,7 +184,7 @@ class Table extends React.Component {
                     "titleTop":"Codelab",
                     "titleMiddle":"",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile1,
                     "speakerName":"Las"
                 }
             ],
@@ -293,30 +308,38 @@ class TableRow extends React.Component {
 
 class TableItem extends React.Component {
     render(){
-        let _style;
+        let cateStyle;
+        let imgStyle;
         if(this.props.speakerCate === "AI/ML"){
-            _style = {"background-color": "#FAD2CF"}
+            cateStyle = {"background-color": "#FAD2CF"}
         } else if(this.props.speakerCate === "Web"){
-            _style = {"background-color": "#F29900"}
+            cateStyle = {"background-color": "#F29900"}
         } else if(this.props.speakerCate === "Cloud"){
-            _style = {"background-color": "#CEEAD6"}
+            cateStyle = {"background-color": "#CEEAD6"}
         } else if(this.props.speakerCate === "Android"){
-            _style = {"background-color": "#FeeFC3"}
+            cateStyle = {"background-color": "#FeeFC3"}
         } else if(this.props.speakerCate === "Flutter"){
-            _style = {"background-color": "#FeeFC3"}
+            cateStyle = {"background-color": "#FeeFC3"}
         } else if(this.props.speakerCate === "Codelab"){
-            _style = {"background-color": "#fffa4f"}
+            cateStyle = {"background-color": "#fffa4f"}
         } else if(this.props.speakerCate === "Career"){
-            _style = {"background-color": "#D2E3FC"}
+            cateStyle = {"background-color": "#D2E3FC"}
         } else if(this.props.speakerCate === "AR"){
-            _style = {"background-color": ""}
+            cateStyle = {"background-color": ""}
         }
+
+        imgStyle = {
+            "width":"40px",
+            "height":"40px",
+            "border-radius":"50%",
+            "text-align":"right"
+        };
 
         return(
             <div className="item-row-card">
                 <div className="item-row-header">
                     <div className="speaker-cate">
-                        <div className="speaker-cate-item" style={_style}>{this.props.speakerCate}</div>
+                        <div className="speaker-cate-item" style={cateStyle}>{this.props.speakerCate}</div>
                     </div>
                 </div>
                 <h1 className="item-row-topic">
@@ -329,7 +352,7 @@ class TableItem extends React.Component {
                 <input type="button" className="button-choose" value="선택하기"/>
                 <div className="item-row-speaker">
                     <div className="speaker-img">
-                        <img src={this.props.speakerImg}/>
+                        <img src={this.props.speakerImg} style={imgStyle}/>
                     </div>
                     <div className="speaker-name">
                         {this.props.speakerName}
