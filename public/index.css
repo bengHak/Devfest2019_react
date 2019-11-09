@@ -1,0 +1,145 @@
+body {
+  font-size: 16px;
+  text-align: center;
+}
+div {
+  display: block;
+}
+h1 {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+img {
+  vertical-align: middle;
+}
+
+.section-header > img {
+  width: 50%;
+}
+.container {
+  width: 1200px;
+  padding: 0;
+  margin-right:auto;
+  margin-left:auto;
+}
+.title {
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+.title > h1 {
+  text-align: center;
+}
+/* .timeline {
+  text-align: center;
+} */
+.timeline > img {
+  width: 70%;
+}
+
+@media (min-width: 960px) {
+  .timeline-row {
+      margin: 16px 0px;
+      display: flex;
+  }
+  .spec-time {
+      font-size: 17px;
+      color: rgb(63,63,63);
+      text-align: center;
+      width: 42px;
+      height: 100px;
+      margin: 0;
+      float: left;
+  }
+  .spec-item {
+      display: flex;
+      margin-left: 40px;
+      flex: 1 1 0%;
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(216, 216, 216);
+      border-radius: 15px;
+      padding: 16px 16px;
+      box-shadow: 5px 5px 5px gray;
+  }
+  .spec-item-first {
+      display: flex;
+      margin-left: 40px;
+      flex: 1 1 0%;
+      padding: 16px 16px;
+  }
+  .spec-card {
+      display: flex;
+      height: 300px;
+      margin-left: 40px;
+      flex: 1 1 0%;
+      /* padding: 16px 16px; */
+  }
+  .item-row {
+      width: 265px;
+      margin-right: 17px;
+  }
+  .item-row-card {
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(216, 216, 216);
+      border-radius: 15px;
+      width: 265px;
+      margin-right: 17px;
+      box-shadow: 5px 5px 5px gray;
+  }
+  .item-row-topic-header {
+      font-size: 20px;
+      margin: 20px 10px;
+      text-align: center;
+      height: 40px;
+  }
+  .item-row-topic {
+      font-size: 20px;
+      margin: 20px 10px;
+      text-align: center;
+      height: 110px;
+  }
+  .button-choose {
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(216, 216, 216);
+      border-radius: 15px;
+      width: 80px;
+      height: 40px;
+  }
+  .item-row-speaker {
+      margin: 13px 13px 13px 13px;
+      display: flex;
+      flex: 1 1 0%;
+      height: 50px;
+  }
+  .speaker-img {
+      text-align: left;
+      width: 70px;
+  }
+  .speaker-name {
+      font-size: 15px;
+      margin-left: 20px;
+      text-align: right;
+      width: 150px;
+      margin-top: 10px;
+  }
+  .item-row-header {
+      margin: 13px 13px 13px 13px;
+  }
+  .speaker-cate-item {
+      /* text-align: left; */
+      border-style: solid;
+      border-width: 1px;
+      border-color: white;
+      border-radius: 24px;
+      width: 50px;
+      font-size: 13px;
+      padding: 4px 8px;
+      font-weight: 600;
+      /* color: white; */
+  }
+
+
+}
