@@ -17,6 +17,14 @@ function App() {
             <h1>🏫 DevFest on Campus 2019 이벤트 페이지입니다 🏫</h1>
         </div>
         <Table></Table>
+        <div className="footer">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            contact Devfest on Campus 2019
+        </div>
       </div>
   );
 }

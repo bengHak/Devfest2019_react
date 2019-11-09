@@ -1,4 +1,6 @@
 import React from 'react';
+import MyTable from './MyTable';
+
 import profile1 from '../img/profile1.png';
 import profile2 from '../img/profile2.jpeg';
 import profile3 from '../img/profile3.jpeg';
@@ -16,10 +18,27 @@ import profile14 from '../img/profile14.jpg';
 import profile15 from '../img/profile15.jpeg';
 
 class Table extends React.Component {
+    state = {
+        "myTable":{
+            "session1":"",
+            "session2":"",
+            "session3":"",
+            "session4":"",
+            "session5":"",
+        }   
+    }
+
+    myTableCallBack = (data) => {
+        this.setState({
+            "myTable": data
+        });
+    }
+
     render() {
         let eventList=[
             [
                 {
+                    "row":0,
                     "speakerCate":"AI/ML",
                     "titleTop":"Tensorflow 2.0",
                     "titleMiddle":"무엇이 바뀌었을까요?",
@@ -28,6 +47,7 @@ class Table extends React.Component {
                     "speakerName":"박해선"
                 },
                 {
+                    "row":0,
                     "speakerCate":"Career",
                     "titleTop":"빠르고 지속적으로",
                     "titleMiddle":"성장하는 방법",
@@ -36,6 +56,7 @@ class Table extends React.Component {
                     "speakerName":"Las"
                 },
                 {
+                    "row":0,
                     "speakerCate":"Android",
                     "titleTop":"What is equivalent of",
                     "titleMiddle":"android ~in flutter?",
@@ -44,6 +65,7 @@ class Table extends React.Component {
                     "speakerName":"최희재"
                 },
                 {
+                    "row":0,
                     "speakerCate":"Codelab",
                     "titleTop":"Codelab",
                     "titleMiddle":"",
@@ -54,6 +76,7 @@ class Table extends React.Component {
             ],
             [
                 {
+                    "row":1,
                     "speakerCate":"Cloud",
                     "titleTop":"GCP 자격증 취득 후",
                     "titleMiddle":"찾아온 기회들",
@@ -62,6 +85,7 @@ class Table extends React.Component {
                     "speakerName":"이동민"
                 },
                 {
+                    "row":1,
                     "speakerCate":"AI/ML",
                     "titleTop":"계륵 같은 딥러닝",
                     "titleMiddle":"실 서비스 적용기",
@@ -70,6 +94,7 @@ class Table extends React.Component {
                     "speakerName":"이형남"
                 },
                 {
+                    "row":1,
                     "speakerCate":"Career",
                     "titleTop":"오픈소스 참여일지",
                     "titleMiddle":"멀고도 험난한",
@@ -78,6 +103,7 @@ class Table extends React.Component {
                     "speakerName":"강민철"
                 },
                 {
+                    "row":1,
                     "speakerCate":"Codelab",
                     "titleTop":"Codelab",
                     "titleMiddle":"",
@@ -88,6 +114,7 @@ class Table extends React.Component {
             ],
             [
                 {
+                    "row":2,
                     "speakerCate":"Web",
                     "titleTop":"웹초보도 할 수 있는",
                     "titleMiddle":"WebVR/AR with aframe",
@@ -96,6 +123,7 @@ class Table extends React.Component {
                     "speakerName":"유경수"
                 },
                 {
+                    "row":2,
                     "speakerCate":"Cloud",
                     "titleTop":"용산조립서버에서",
                     "titleMiddle":"클라우드까지",
@@ -104,6 +132,7 @@ class Table extends React.Component {
                     "speakerName":"정민석"
                 },
                 {
+                    "row":2,
                     "speakerCate":"AI/ML",
                     "titleTop":"GAN을 활용한, 내 손글씨를 따라쓰는 인공지능",
                     "titleMiddle":"-나 혼자서",
@@ -112,6 +141,7 @@ class Table extends React.Component {
                     "speakerName":"정민정"
                 },
                 {
+                    "row":2,
                     "speakerCate":"Codelab",
                     "titleTop":"Codelab",
                     "titleMiddle":"",
@@ -122,6 +152,7 @@ class Table extends React.Component {
             ],
             [
                 {
+                    "row":3,
                     "speakerCate":"Career",
                     "titleTop":"의식적인 연습으로 TDD,",
                     "titleMiddle":"리팩토링, 클린코드",
@@ -130,6 +161,7 @@ class Table extends React.Component {
                     "speakerName":"박재성"
                 },
                 {
+                    "row":3,
                     "speakerCate":"Flutter",
                     "titleTop":"지식in 플러터 앱 개발기",
                     "titleMiddle":"aka 크로스 플랫폼은",
@@ -138,6 +170,7 @@ class Table extends React.Component {
                     "speakerName":"조은"
                 },
                 {
+                    "row":3,
                     "speakerCate":"Career",
                     "titleTop":"만들면서, 자랑하면서",
                     "titleMiddle":"성장하는 개발자",
@@ -146,6 +179,7 @@ class Table extends React.Component {
                     "speakerName":"이민석"
                 },
                 {
+                    "row":3,
                     "speakerCate":"Codelab",
                     "titleTop":"Codelab",
                     "titleMiddle":"",
@@ -156,6 +190,7 @@ class Table extends React.Component {
             ],
             [
                 {
+                    "row":4,
                     "speakerCate":"Cloud",
                     "titleTop":"구글 클라우드 플랫폼으로",
                     "titleMiddle":"오픈 소스 AI 솔루션 경험하기",
@@ -164,6 +199,7 @@ class Table extends React.Component {
                     "speakerName":"김민현"
                 },
                 {
+                    "row":4,
                     "speakerCate":"AR",
                     "titleTop":"증강현실 개발의 핵심,",
                     "titleMiddle":"ARCore!",
@@ -172,6 +208,7 @@ class Table extends React.Component {
                     "speakerName":"박유진"
                 },
                 {
+                    "row":4,
                     "speakerCate":"AI/ML",
                     "titleTop":"Web for Everyone",
                     "titleMiddle":"",
@@ -180,6 +217,7 @@ class Table extends React.Component {
                     "speakerName":"장한보람"
                 },
                 {
+                    "row":4,
                     "speakerCate":"Codelab",
                     "titleTop":"Codelab",
                     "titleMiddle":"",
@@ -226,36 +264,48 @@ class Table extends React.Component {
                         events="행사 Opening"
                     />
                     <TableRow
+                        myTable={this.state["myTable"]}
+                        callBack={this.myTableCallBack}
                         flag="1"
                         start_time="13:25"
                         end_time="14:05"
                         events={eventList[0]}
                     />
                     <TableRow
+                        myTable={this.state["myTable"]}
+                        callBack={this.myTableCallBack}
                         flag="1"
                         start_time="14:15"
                         end_time="14:55"
                         events={eventList[1]}
                     />
                     <TableRow
+                        myTable={this.state["myTable"]}
+                        callBack={this.myTableCallBack}
                         flag="1"
                         start_time="15:10"
                         end_time="15:50"
                         events={eventList[2]}
                     />
                     <TableRow
+                        myTable={this.state["myTable"]}
+                        callBack={this.myTableCallBack}
                         flag="1"
                         start_time="16:00"
                         end_time="16:40"
                         events={eventList[3]}
                     />
                     <TableRow
+                        myTable={this.state["myTable"]}
+                        callBack={this.myTableCallBack}
                         flag="1"
                         start_time="16:50"
                         end_time="17:30"
                         events={eventList[4]}
                     />
                 </div>
+                <MyTable contents={this.state["myTable"]}/>
+                {console.log(this.state["myTable"])}
             </>
         );
     }
@@ -265,7 +315,6 @@ class TableRow extends React.Component {
     render(){
         let events = [];
         let row;
-        console.log(this.props.events)
         if(this.props.flag === "0"){
             row = <div className="spec-item">
                 <div className="item-row">
@@ -277,6 +326,9 @@ class TableRow extends React.Component {
             for(let item in this.props.events){
                 events.push(
                     <TableItem 
+                        myTable={this.props.myTable}
+                        callBack={this.props.callBack}
+                        row={eventsFromProps[item].row}
                         speakerCate={eventsFromProps[item].speakerCate}
                         titleTop={eventsFromProps[item].titleTop}
                         titleMiddle={eventsFromProps[item].titleMiddle}
@@ -307,32 +359,62 @@ class TableRow extends React.Component {
 }
 
 class TableItem extends React.Component {
+
+    pickSession = () => {
+        let myTable = this.props.myTable
+        switch(this.props.row) {
+            case 0:{
+                myTable["session1"] = this.props;
+                break;
+            }
+            case 1:{
+                myTable["session2"] = this.props;
+                break;
+            }
+            case 2:{
+                myTable["session3"] = this.props;
+                break;
+            }
+            case 3:{
+                myTable["session4"] = this.props;
+                break;
+            }
+            case 4:{
+                myTable["session5"] = this.props;
+                break;
+            }
+            default:
+                break;
+        }
+        this.props.callBack(myTable);
+    }
+
     render(){
         let cateStyle;
         let imgStyle;
         if(this.props.speakerCate === "AI/ML"){
-            cateStyle = {"background-color": "#FAD2CF"}
+            cateStyle = {"backgroundColor": "#FAD2CF"}
         } else if(this.props.speakerCate === "Web"){
-            cateStyle = {"background-color": "#F29900"}
+            cateStyle = {"backgroundColor": "#F29900"}
         } else if(this.props.speakerCate === "Cloud"){
-            cateStyle = {"background-color": "#CEEAD6"}
+            cateStyle = {"backgroundColor": "#CEEAD6"}
         } else if(this.props.speakerCate === "Android"){
-            cateStyle = {"background-color": "#FeeFC3"}
+            cateStyle = {"backgroundColor": "#FeeFC3"}
         } else if(this.props.speakerCate === "Flutter"){
-            cateStyle = {"background-color": "#FeeFC3"}
+            cateStyle = {"backgroundColor": "#FeeFC3"}
         } else if(this.props.speakerCate === "Codelab"){
-            cateStyle = {"background-color": "#fffa4f"}
+            cateStyle = {"backgroundColor": "#fffa4f"}
         } else if(this.props.speakerCate === "Career"){
-            cateStyle = {"background-color": "#D2E3FC"}
+            cateStyle = {"backgroundColor": "#D2E3FC"}
         } else if(this.props.speakerCate === "AR"){
-            cateStyle = {"background-color": ""}
+            cateStyle = {"backgroundColor": ""}
         }
 
         imgStyle = {
             "width":"40px",
             "height":"40px",
-            "border-radius":"50%",
-            "text-align":"right"
+            "borderRadius":"50%",
+            "textAlign":"right"
         };
 
         return(
@@ -349,7 +431,7 @@ class TableItem extends React.Component {
                     <br/>
                     {this.props.titleBottom}
                 </h1>
-                <input type="button" className="button-choose" value="선택하기"/>
+                <input type="button" className="button-choose" onClick={this.pickSession} value="선택하기"/>
                 <div className="item-row-speaker">
                     <div className="speaker-img">
                         <img src={this.props.speakerImg} style={imgStyle}/>
