@@ -25,7 +25,7 @@ class Table extends React.Component {
             "session3":"",
             "session4":"",
             "session5":"",
-        }   
+        }
     }
 
     myTableCallBack = (data) => {
@@ -193,8 +193,8 @@ class Table extends React.Component {
                     "row":4,
                     "speakerCate":"Cloud",
                     "titleTop":"구글 클라우드 플랫폼으로",
-                    "titleMiddle":"오픈 소스 AI 솔루션 경험하기",
-                    "titleBottom":"",
+                    "titleMiddle":"오픈 소스 AI 솔루션",
+                    "titleBottom":"경험하기",
                     "speakerImg":profile13,
                     "speakerName":"김민현"
                 },
