@@ -1,6 +1,9 @@
 {
   "name": "devfest2019",
   "version": "0.1.0",
+  "engines": {
+    "yarn": "1.19.1"
+  },
   "private": true,
   "dependencies": {
     "downloadjs": "^1.4.7",
@@ -29,6 +32,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage" : "http://byunghak-w.github.io/"
+  }
 }
