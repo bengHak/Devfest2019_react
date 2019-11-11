@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "dom-to-image": "^2.6.0",
+    "downloadjs": "^1.4.7",
+    "html-to-image": "^0.1.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0"
@@ -28,5 +29,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage" : "http://byunghak-w.github.io/"
 }

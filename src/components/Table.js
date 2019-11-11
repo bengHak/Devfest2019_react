@@ -1,15 +1,16 @@
 import React from 'react';
 import MyTable from './MyTable';
 
+import defaultImg from '../img/default.png';
 import profile1 from '../img/profile1.png';
 import profile2 from '../img/profile2.jpeg';
 import profile3 from '../img/profile3.jpeg';
-// import profile4 from '../img/profile4.jpeg';
-// import profile5 from '../img/profile5.JPG';
+import profile4 from '../img/profile4.jpg';
+import profile5 from '../img/profile5.png';
 // import profile6 from '../img/profile6.jpg';
 import profile7 from '../img/profile7.jpeg';
-import profile8 from '../img/profile8.JPG';
-import profile9 from '../img/profile9.JPG';
+import profile8 from '../img/profile8.jpg';
+import profile9 from '../img/profile9.jpg';
 import profile10 from '../img/profile10.jpg';
 // import profile11 from '../img/profile11.jpg';
 import profile12 from '../img/profile12.jpg';
@@ -40,27 +41,7 @@ class Table extends React.Component {
         return (
             <>
                 <div className="timeline-all">
-                    <div className="timeline-row">
-                        <div className="spec-time">
-                            <span className="start-time">
-                                시간
-                    </span>
-                        </div>
-                        <div className="spec-item-first">
-                            <div className="item-row">
-                                <h1 className="item-row-topic">Track A</h1>
-                            </div>
-                            <div className="item-row">
-                                <h1 className="item-row-topic">Track B</h1>
-                            </div>
-                            <div className="item-row">
-                                <h1 className="item-row-topic">Track C</h1>
-                            </div>
-                            <div className="item-row">
-                                <h1 className="item-row-topic">Codelab</h1>
-                            </div>
-                        </div>
-                    </div>
+
                     <TableRow
                         flag="0"
                         start_time="12:00"
@@ -73,6 +54,27 @@ class Table extends React.Component {
                         end_time="13:15"
                         events="행사 Opening"
                     />
+                    <div className="timeline-row-name"> 
+                        <div className="spec-time">
+                            <span className="start-time">
+                                
+                            </span>
+                        </div>
+                        <div className="spec-item-first">
+                                <div className="item-row">
+                                    <h1 className="item-row-topic-header">Track A</h1>
+                                </div>
+                                <div className="item-row">
+                                    <h1 className="item-row-topic-header">Track B</h1>
+                                </div>
+                                <div className="item-row">
+                                    <h1 className="item-row-topic-header">Track C</h1>
+                                </div>
+                                <div className="item-row">
+                                    <h1 className="item-row-topic-header">Codelab</h1>
+                                </div>
+                        </div>
+                    </div>
                     <TableRow
                         myTable={this.state["myTable"]}
                         callBack={this.myTableCallBack}
@@ -130,11 +132,13 @@ class TableRow extends React.Component {
         let events = [];
         let rowBlock;
         if(this.props.flag === "0"){
-            rowBlock = <div className="spec-item">
+            rowBlock = (
+            <div className="spec-item">
                 <div className="item-row">
-                    <h1 className="item-row-topic">{this.props.events}</h1>
+                    <h1 className="item-row-topic-header">{this.props.events}</h1>
                 </div>
             </div>
+            );
         } else {
             for(let item in this.props.events){
                 events.push(
@@ -156,9 +160,22 @@ class TableRow extends React.Component {
         return(
             <div className="timeline-row">
                 <div className="spec-time">
-                    <div className="start-time">{this.props.start_time}</div>
-                    <div>~</div>
-                    <div className="start-time">{this.props.end_time}</div>
+                    {
+                        document.documentElement.clientWidth > 900 ?
+                        <>
+                            <div className="start-time">{this.props.start_time}</div>
+                            <div>~</div>
+                            <div className="start-time">{this.props.end_time}</div> 
+                        </>
+                        :
+                        <>
+                            <br/>
+                            <hr/>
+                            <span className="start-time">{this.props.start_time}</span>
+                            <span>~</span>
+                            <span className="start-time">{this.props.end_time}</span> 
+                        </>
+                    }
                 </div>
                 {rowBlock}
             </div>
@@ -186,6 +203,7 @@ class TableItem extends React.Component {
     render(){
         let row=this.props.row
         let col=this.props.col
+        let trackList = ['Track A', 'Track B', 'Track C', 'Codelab']
         let eventList=[
             [
                 {
@@ -232,7 +250,7 @@ class TableItem extends React.Component {
                     "titleTop":"GCP 자격증 취득 후",
                     "titleMiddle":"찾아온 기회들",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile4,
                     "speakerName":"이동민"
                 },
                 {
@@ -241,7 +259,7 @@ class TableItem extends React.Component {
                     "titleTop":"계륵 같은 딥러닝",
                     "titleMiddle":"실 서비스 적용기",
                     "titleBottom":"",
-                    "speakerImg":"",
+                    "speakerImg":profile5,
                     "speakerName":"이형남"
                 },
                 {
@@ -250,7 +268,7 @@ class TableItem extends React.Component {
                     "titleTop":"오픈소스 참여일지",
                     "titleMiddle":"멀고도 험난한",
                     "titleBottom":"숟가락 얹기 여정",
-                    "speakerImg":"",
+                    "speakerImg":defaultImg,
                     "speakerName":"강민철"
                 },
                 {
@@ -317,7 +335,7 @@ class TableItem extends React.Component {
                     "titleTop":"지식in 플러터 앱 개발기",
                     "titleMiddle":"aka 크로스 플랫폼은",
                     "titleBottom":"도전인가 기회인가",
-                    "speakerImg":"",
+                    "speakerImg":defaultImg,
                     "speakerName":"조은"
                 },
                 {
@@ -351,7 +369,7 @@ class TableItem extends React.Component {
                 },
                 {
                     "row":4,
-                    "speakerCate":"AR",
+                    "speakerCate":"Android",
                     "titleTop":"증강현실 개발의 핵심,",
                     "titleMiddle":"ARCore!",
                     "titleBottom":"",
@@ -360,7 +378,7 @@ class TableItem extends React.Component {
                 },
                 {
                     "row":4,
-                    "speakerCate":"AI/ML",
+                    "speakerCate":"Web",
                     "titleTop":"Web for Everyone",
                     "titleMiddle":"",
                     "titleBottom":"",
@@ -384,7 +402,7 @@ class TableItem extends React.Component {
         if(eventList[row][col].speakerCate === "AI/ML"){
             cateStyle = {"backgroundColor": "#FAD2CF"}
         } else if(eventList[row][col].speakerCate === "Web"){
-            cateStyle = {"backgroundColor": "#F29900"}
+            cateStyle = {"backgroundColor": "#D7AC87"}
         } else if(eventList[row][col].speakerCate === "Cloud"){
             cateStyle = {"backgroundColor": "#CEEAD6"}
         } else if(eventList[row][col].speakerCate === "Android"){
@@ -392,11 +410,11 @@ class TableItem extends React.Component {
         } else if(eventList[row][col].speakerCate === "Flutter"){
             cateStyle = {"backgroundColor": "#FeeFC3"}
         } else if(eventList[row][col].speakerCate === "Codelab"){
-            cateStyle = {"backgroundColor": "#fffa4f"}
+            cateStyle = {"backgroundColor": "#A5E3E6"}
         } else if(eventList[row][col].speakerCate === "Career"){
             cateStyle = {"backgroundColor": "#D2E3FC"}
         } else if(eventList[row][col].speakerCate === "AR"){
-            cateStyle = {"backgroundColor": ""}
+            cateStyle = {"backgroundColor": "#D7AC87"}
         }
 
         imgStyle = {
@@ -410,7 +428,7 @@ class TableItem extends React.Component {
 
         if(this.props.myTable[this.state["row"]][this.state["col"]] === 1){
             bgColor={
-                "backgroundColor":"yellow"
+                "backgroundColor":"skyblue",
             }
         } else {
             bgColor={
@@ -423,6 +441,7 @@ class TableItem extends React.Component {
                 <div className="item-row-header">
                     <div className="speaker-cate">
                         <div className="speaker-cate-item" style={cateStyle}>{eventList[row][col].speakerCate}</div>
+                        <div className="speaker-track-item" >{trackList[col]}</div>
                     </div>
                 </div>
                 <h1 className="item-row-topic">
@@ -432,17 +451,25 @@ class TableItem extends React.Component {
                     <br/>
                     {eventList[row][col].titleBottom}
                 </h1>
-                <div className="item-row-speaker">
-                    {
-                        eventList[row][col].speakerImg ===""? <></> : <div className="speaker-img">
-                        <img src={eventList[row][col].speakerImg} style={imgStyle}/>
-                        </div>
-                    }
+                {
+                    eventList[row][col].speakerCate === "Codelab" ?
+                    <>
+                        <input type="button" className="button-choose" onClick={this.pickSession} value="선택하기"></input>
+                    </>
+                    :
+                    <>
+                    <div className="item-row-speaker">
+                    <div className="speaker-img">
+                    <img src={eventList[row][col].speakerImg} style={imgStyle}/>
+                    </div>
+                    <div className="speaker-name-mobile"> {eventList[row][col].speakerName} </div>
                     <input type="button" className="button-choose" onClick={this.pickSession} value="선택하기"/>
-                </div>
-                <div className="speaker-name">
+                    </div> 
+                    <div className="speaker-name">
                         {eventList[row][col].speakerName}
-                </div>
+                    </div>
+                    </>
+                }
             </div>
         );
     }
