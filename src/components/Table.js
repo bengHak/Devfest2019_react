@@ -9,7 +9,7 @@ import profile4 from '../img/profile4.jpg';
 import profile5 from '../img/profile5.png';
 // import profile6 from '../img/profile6.jpg';
 import profile7 from '../img/profile7.jpeg';
-import profile8 from '../img/profile8.jpg';
+import profile8_ from '../img/profile8_.jpg';
 import profile9 from '../img/profile9.jpg';
 import profile10 from '../img/profile10.jpg';
 // import profile11 from '../img/profile11.jpg';
@@ -297,7 +297,7 @@ class TableItem extends React.Component {
                     "titleTop":"용산조립서버에서",
                     "titleMiddle":"클라우드까지",
                     "titleBottom":"",
-                    "speakerImg":profile8,
+                    "speakerImg":profile8_,
                     "speakerName":"정민석"
                 },
                 {
