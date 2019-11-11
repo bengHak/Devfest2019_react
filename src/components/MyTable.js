@@ -10,8 +10,8 @@ import profile5 from '../img/profile5.png';
 // import profile6 from '../img/profile6.jpg';
 import profile7 from '../img/profile7.jpeg';
 import profile8_ from '../img/profile8_.jpg';
-import profile9 from '../img/profile9.jpg';
-import profile10 from '../img/profile10.jpg';
+import profile9_ from '../img/profile9_.jpg';
+import profile10_ from '../img/profile10_.jpg';
 // import profile11 from '../img/profile11.jpg';
 import profile12 from '../img/profile12.jpg';
 import profile13 from '../img/profile13.jpg';
@@ -220,7 +220,7 @@ class MyTable extends React.Component {
                     "titleTop":"GAN을 활용한, 내 손글씨를 따라쓰는 인공지능",
                     "titleMiddle":"-나 혼자서",
                     "titleBottom":"딥러닝 프로젝트 A to Z",
-                    "speakerImg":profile9,
+                    "speakerImg":profile9_,
                     "speakerName":"정민정"
                 },
                 {
@@ -240,7 +240,7 @@ class MyTable extends React.Component {
                     "titleTop":"의식적인 연습으로 TDD,",
                     "titleMiddle":"리팩토링, 클린코드",
                     "titleBottom":"연습하기",
-                    "speakerImg":profile10,
+                    "speakerImg":profile10_,
                     "speakerName":"박재성"
                 },
                 {
